@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Project15April/Archive",
+				"fileName": "SalesLTCustomer.txt",
+				"folderPath": "Project15April/Output",
 				"fileSystem": "vishnucontainer"
 			},
 			"columnDelimiter": ",",

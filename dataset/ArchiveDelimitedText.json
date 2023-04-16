@@ -1,0 +1,23 @@
+{
+	"name": "ArchiveDelimitedText",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SotargeAzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Project15April/Archive",
+				"fileSystem": "vishnucontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

@@ -114,13 +114,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDelimited",
+						"referenceName": "SalesTextFile",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "SalesTextFile",
+						"referenceName": "ArchiveDelimitedText",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,0 +1,29 @@
+{
+	"name": "SalesTextFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SotargeAzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "SalesLTCustomerAddress.txt",
+				"folderPath": "Project15April/Input",
+				"fileSystem": "vishnucontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "CustomerID\tAddressID\tAddressType\trowguid\tModifiedDate",
+				"type": "String"
+			}
+		]
+	}
+}

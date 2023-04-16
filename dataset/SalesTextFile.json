@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "Project15April/Archive",
+				"folderPath": "Project15April/Output",
 				"fileSystem": "vishnucontainer"
 			},
 			"columnDelimiter": ",",

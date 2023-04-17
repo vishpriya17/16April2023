@@ -61,6 +61,34 @@
 				]
 			}
 		],
+		"parameters": {
+			"Parameter_File": {
+				"type": "string"
+			},
+			"Parameter_input": {
+				"type": "string"
+			},
+			"Parameter_output": {
+				"type": "string"
+			},
+			"Parameter_Container": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"Pipeline_Container": {
+				"type": "String"
+			},
+			"Pipeline_Input": {
+				"type": "String"
+			},
+			"Pipeline_Output": {
+				"type": "String"
+			},
+			"Pipeline_File": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }

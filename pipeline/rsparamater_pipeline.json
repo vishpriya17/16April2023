@@ -84,6 +84,9 @@
 			},
 			"data_filename": {
 				"type": "string"
+			},
+			"data_output": {
+				"type": "string"
 			}
 		},
 		"annotations": []

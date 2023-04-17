@@ -1,0 +1,27 @@
+{
+	"name": "rssourcedataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SotargeAzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "SalesLTCustomer.txt",
+				"folderPath": "Project15April/Input",
+				"fileSystem": "vishnucontainer"
+			},
+			"columnDelimiter": "\t",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"type": "String"
+			}
+		]
+	}
+}

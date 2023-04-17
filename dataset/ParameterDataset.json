@@ -5,6 +5,20 @@
 			"referenceName": "SotargeAzureDataLake",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"Dataset_Container": {
+				"type": "string"
+			},
+			"Dataset_Input": {
+				"type": "string"
+			},
+			"Dataset_Output": {
+				"type": "string"
+			},
+			"Dataset_Filename": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

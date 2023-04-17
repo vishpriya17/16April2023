@@ -91,16 +91,20 @@
 		],
 		"parameters": {
 			"Parameter_File": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "SalesLTCustomer.txt"
 			},
 			"Parameter_input": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Project15April/Input"
 			},
 			"Parameter_output": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "Project15April/Output"
 			},
 			"Parameter_Container": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "vishnucontainer"
 			}
 		},
 		"variables": {

@@ -50,13 +50,41 @@
 				"inputs": [
 					{
 						"referenceName": "ParameterDataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Dataset_Container": {
+								"value": "@pipeline().parameters.Parameter_Container",
+								"type": "Expression"
+							},
+							"Dataset_Input": {
+								"value": "@pipeline().parameters.Parameter_input",
+								"type": "Expression"
+							},
+							"Dataset_Filename": {
+								"value": "@pipeline().parameters.Parameter_File",
+								"type": "Expression"
+							}
+						}
 					}
 				],
 				"outputs": [
 					{
 						"referenceName": "ParameterDataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Dataset_Container": {
+								"value": "@pipeline().parameters.Parameter_Container",
+								"type": "Expression"
+							},
+							"Dataset_Input": {
+								"value": "@pipeline().parameters.Parameter_input",
+								"type": "Expression"
+							},
+							"Dataset_Filename": {
+								"value": "@pipeline().parameters.Parameter_File",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}

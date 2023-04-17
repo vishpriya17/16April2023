@@ -1,0 +1,32 @@
+{
+	"name": "parameterdataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SotargeAzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"dataset_container": {
+				"type": "string"
+			},
+			"dataset_directory": {
+				"type": "string"
+			},
+			"dataset_filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

@@ -87,6 +87,92 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Parameterdata_2",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "ParameterDataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"Dataset_Container": {
+								"value": "@pipeline().parameters.Parameter_Container",
+								"type": "Expression"
+							},
+							"Dataset_Input": {
+								"value": "@pipeline().parameters.Parameter_input",
+								"type": "Expression"
+							},
+							"Dataset_Filename": {
+								"value": "@pipeline().parameters.Parameter_File",
+								"type": "Expression"
+							}
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ParameterDataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"Dataset_Container": {
+								"value": "@pipeline().parameters.Parameter_Container",
+								"type": "Expression"
+							},
+							"Dataset_Input": {
+								"value": "@pipeline().parameters.Parameter_output",
+								"type": "Expression"
+							},
+							"Dataset_Filename": {
+								"value": "@pipeline().parameters.Parameter_File",
+								"type": "Expression"
+							}
+						}
+					}
+				]
 			}
 		],
 		"parameters": {
@@ -105,6 +191,10 @@
 			"Parameter_Container": {
 				"type": "string",
 				"defaultValue": "vishnucontainer"
+			},
+			"Parameter_Archive": {
+				"type": "string",
+				"defaultValue": "Project15April/Archive"
 			}
 		},
 		"variables": {
@@ -118,6 +208,9 @@
 				"type": "String"
 			},
 			"Pipeline_File": {
+				"type": "String"
+			},
+			"Pipeline_Archive": {
 				"type": "String"
 			}
 		},

@@ -201,7 +201,7 @@
 		"parameters": {
 			"Parameter_File": {
 				"type": "string",
-				"defaultValue": "SalesLTCustomer.txt"
+				"defaultValue": "SalesLTCustomerAddress.txt"
 			},
 			"Parameter_input": {
 				"type": "string",

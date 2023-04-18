@@ -15,6 +15,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().Filename_output",
+					"type": "Expression"
+				},
 				"folderPath": "Project15April/Output",
 				"fileSystem": "vishnucontainer"
 			},

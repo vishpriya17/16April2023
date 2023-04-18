@@ -106,14 +106,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "Metadata_Dataset",
-									"type": "DatasetReference",
-									"parameters": {
-										"Filename": {
-											"value": "@item().name",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "SourceGetMetadata",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [

@@ -123,6 +123,12 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "If Condition1",
+							"type": "IfCondition",
+							"dependsOn": [],
+							"userProperties": []
 						}
 					]
 				}

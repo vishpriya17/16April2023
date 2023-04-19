@@ -125,15 +125,11 @@
 										],
 										"outputs": [
 											{
-												"referenceName": "SinkGetMetadata",
+												"referenceName": "ElseDataset",
 												"type": "DatasetReference",
 												"parameters": {
 													"Filename": {
 														"value": "@activity('Get Metadata').output.childItems",
-														"type": "Expression"
-													},
-													"Folder": {
-														"value": "@activity('Get Metadata').output.itemName",
 														"type": "Expression"
 													}
 												}
@@ -206,10 +202,6 @@
 												"parameters": {
 													"Filename": {
 														"value": "@activity('Get Metadata').output.childItems",
-														"type": "Expression"
-													},
-													"Folder": {
-														"value": "@activity('Get Metadata').output.itemName",
 														"type": "Expression"
 													}
 												}

@@ -201,7 +201,7 @@
 												"type": "DatasetReference",
 												"parameters": {
 													"Filename": {
-														"value": "@activity('Get Metadata').output.childItems",
+														"value": "@item().name",
 														"type": "Expression"
 													}
 												}

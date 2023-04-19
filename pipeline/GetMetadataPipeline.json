@@ -128,10 +128,7 @@
 												"referenceName": "ElseDataset2",
 												"type": "DatasetReference",
 												"parameters": {
-													"Filename": {
-														"value": "@activity('Get Metadata').output.childItems",
-														"type": "Expression"
-													}
+													"Filename": "@item().name"
 												}
 											}
 										]

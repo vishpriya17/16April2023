@@ -126,7 +126,17 @@
 										"outputs": [
 											{
 												"referenceName": "SinkGetMetadata",
-												"type": "DatasetReference"
+												"type": "DatasetReference",
+												"parameters": {
+													"Filename": {
+														"value": "@activity('Get Metadata').output.childItems",
+														"type": "Expression"
+													},
+													"Folder": {
+														"value": "@activity('Get Metadata').output.itemName",
+														"type": "Expression"
+													}
+												}
 											}
 										]
 									}

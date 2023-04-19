@@ -22,10 +22,7 @@
 					"value": "@dataset().Filename",
 					"type": "Expression"
 				},
-				"folderPath": {
-					"value": "@dataset().Folder",
-					"type": "Expression"
-				},
+				"folderPath": "Project15April/Output/Market",
 				"fileSystem": "vishnucontainer"
 			},
 			"columnDelimiter": ",",

@@ -5,20 +5,11 @@
 			"referenceName": "SotargeAzureDataLake",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"Filename_output": {
-				"type": "string"
-			}
-		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().Filename_output",
-					"type": "Expression"
-				},
 				"folderPath": "Project15April/Output",
 				"fileSystem": "vishnucontainer"
 			},

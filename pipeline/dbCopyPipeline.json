@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "Select * from [SalesLT].[ProductDescription]",
+						"sqlReaderQuery": "select ProductID,Name,Color from [SalesLT].[Product]",
 						"queryTimeout": "00:01:00",
 						"partitionOption": "None"
 					},
@@ -44,7 +44,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "SqlServerTable1",
+						"referenceName": "SinkTable",
 						"type": "DatasetReference"
 					}
 				]

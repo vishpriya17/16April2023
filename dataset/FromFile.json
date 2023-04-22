@@ -1,0 +1,37 @@
+{
+	"name": "FromFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SotargeAzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "PersonDeatilNew.txt",
+				"folderPath": "Project15April/Output",
+				"fileSystem": "vishnucontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "vp",
+				"type": "String"
+			},
+			{
+				"name": "26",
+				"type": "String"
+			},
+			{
+				"name": "XXX",
+				"type": "String"
+			}
+		]
+	}
+}

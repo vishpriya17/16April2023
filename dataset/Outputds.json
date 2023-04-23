@@ -1,0 +1,24 @@
+{
+	"name": "Outputds",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SotargeAzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "outputfromdf.txt",
+				"folderPath": "Project15April/Output",
+				"fileSystem": "vishnucontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

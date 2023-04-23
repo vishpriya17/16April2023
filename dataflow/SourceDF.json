@@ -25,9 +25,6 @@
 				{
 					"name": "select1",
 					"description": "Renaming Sourcedf to select1 with columns 'ProductID, Name, ProductNumber, Color'"
-				},
-				{
-					"name": "filter1"
 				}
 			],
 			"scriptLines": [
@@ -61,8 +58,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1",
-				"select1 filter(ProductID >= 800) ~> filter1",
-				"filter1 sink(allowSchemaDrift: true,",
+				"select1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     umask: 0022,",
 				"     preCommands: [],",

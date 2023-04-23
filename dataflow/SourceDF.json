@@ -12,8 +12,24 @@
 					"name": "Sourcedf"
 				}
 			],
-			"sinks": [],
-			"transformations": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Outputds",
+						"type": "DatasetReference"
+					},
+					"name": "sinkdf"
+				}
+			],
+			"transformations": [
+				{
+					"name": "select1",
+					"description": "Renaming Sourcedf to select1 with columns 'ProductID, Name, ProductNumber, Color'"
+				},
+				{
+					"name": "filter1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          ProductID as string,",
@@ -36,7 +52,23 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> Sourcedf"
+				"     ignoreNoFilesFound: false) ~> Sourcedf",
+				"Sourcedf select(mapColumn(",
+				"          ProductID,",
+				"          Name,",
+				"          ProductNumber,",
+				"          Color",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 filter(Color==\"Red\") ~> filter1",
+				"filter1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sinkdf"
 			]
 		}
 	}

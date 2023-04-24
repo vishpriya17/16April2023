@@ -1,0 +1,39 @@
+{
+	"name": "databrickspipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "EgNotebook",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/vishpriya17@gmail.com/test1",
+					"baseParameters": {
+						"Input_File_path": {
+							"value": "@pipeline().parameters.pp_inputvalue",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"pp_inputvalue": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}

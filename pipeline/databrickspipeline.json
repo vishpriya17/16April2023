@@ -20,7 +20,9 @@
 						"Input_File_path": {
 							"value": "@pipeline().parameters.pp_inputvalue",
 							"type": "Expression"
-						}
+						},
+						"Output_Table": "5",
+						"File_delimited": "5"
 					}
 				},
 				"linkedServiceName": {

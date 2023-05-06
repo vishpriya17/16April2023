@@ -1,0 +1,35 @@
+{
+	"name": "ZippedFile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SotargeAzureDataLake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "AdventureWorksLT2012-20230328T170756Z-001.zip",
+				"folderPath": "Project2",
+				"fileSystem": "vishnucontainer"
+			},
+			"columnDelimiter": ",",
+			"compressionCodec": "ZipDeflate",
+			"compressionLevel": "Optimal",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "PK\u0003\u0004\u0014\u0000\b\b\b\u0000\fFyL\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000(\u00001\u0000AdventureWorksLT2012/SalesLTCustomer.txtup-\u0000\u0001����AdventureWorksLT2012/SalesLTCustomer.txt��Y����&��^Eꥥ66�\bD ��Y�\t#�y��\u0005\u0004@\u0012$\b�\u00008�F���~��� mA\u001e$�s�\u0016q�����dދ���\u001e���S����6Ni\u0016���n�:��\u001ff��/��\f�i\u0007I���",
+				"type": "String"
+			},
+			{
+				"name": "�\u0003�\u000b�Ǐ-��{��j\u0015\\KF�?8���[N�=?I�d� �</�Ӵ��đ_�9iz�\u0013�椛�/���ė�)�J��\u000bV��N��\u0017T\u0012K��R7\t�ȋK��JU�/uƭVI��\u0007;��0�\u0013��xg?�N�/�����<��%t�R��P�?���\u001b�K\u0012�\u0005Y�\u0005\u0011)�Ԫ\f���~ \u0017e0�[�٬\\�\u0014w��=��\u001e��K\u0013J�FK��.��v6O��\u0012�e�b�%�b",
+				"type": "String"
+			}
+		]
+	}
+}

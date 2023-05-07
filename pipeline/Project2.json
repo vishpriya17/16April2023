@@ -125,15 +125,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/vishpriya17@gmail.com/Project2",
-					"baseParameters": {
-						"Input_File_path": {
-							"value": "@pipeline().parameters.pp_inputvalue",
-							"type": "Expression"
-						},
-						"Output_Table": "5",
-						"File_delimited": "5"
-					}
+					"notebookPath": "/Users/vishpriya17@gmail.com/Project2"
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
